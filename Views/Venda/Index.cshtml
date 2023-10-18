@@ -1,0 +1,42 @@
+@model IEnumerable<SP3072118MVCDB.Models.Venda>
+
+@{
+    ViewData["Title"] = "Venda";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Count() == 0)
+{
+    <p>Nenhum pedido cadastrado.</p>    
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>VendaId</th>
+                <th>VendaId</th>
+                <th>ClienteId</th>
+                <th>DataVenda</th>
+                <th>Desconto</th>
+                <th>Valor Bruto</th>
+                <th></th>
+            </tr>
+            <tbody>
+                @foreach(var pedido in Model)
+                {
+                    <tr>
+                        <td>@pedido.VendaId</td>
+                        <td>@pedido.VendaId</td>
+                        <td>@pedido.DataVenda</td>
+                        <td>@pedido.Desconto</td>
+                        <td>@pedido.ValorBruto</td>
+                        <td>
+                            <a href="/Venda/Show/@pedido.VendaId">Ver</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </thead>
+    </table>
+}

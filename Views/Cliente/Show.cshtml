@@ -1,0 +1,25 @@
+@model SP3072118MVCDB.Models.Cliente
+
+@{
+    ViewData["Title"] = $"Cliente {Model.Id}";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p><b>Id:</b> @Model.Id</p>
+<p><b>Nome:</b> @Model.Nome</p>
+<p><b>RG:</b> @Model.RG</p>
+<p><b>CPF:</b> @Model.CPF</p>
+<p><b>Endereco:</b> @Model.Endereco</p>
+
+
+ <a href="/Cliente/Show/@Model.Id">
+    <button type="button">Detalhes</button>
+</a>
+
+<a href="/Cliente/Delete/@Model.Id">
+    <button type="button">Deletar</button>
+</a>
+
+<a href="/Cliente/Update/@Model.Id">
+    <button type="button">Atualizar</button>
+</a>

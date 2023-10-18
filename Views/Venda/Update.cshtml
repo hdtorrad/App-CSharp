@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Atualizar uma venda";
+}
+
+<div class="text">
+    <h1>Atualizar as informações de uma venda:</h1>
+    <hr>
+</div>
+
+
+<form action="../UpdateResult" method="post">
+    <table>
+        <tr>
+            <td>Digite o Id da Venda:</td>
+            <td><input type="text" name="id" id="id" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Digite o Id do Peido:</td>
+            <td><input type="text" name="pedidoId" id="pedidoId" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Digite o Id do Cliente:</td>
+            <td><input type="text" name="clienteId" id="clienteId" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Data Venda:</td>
+            <td><input type="text" name="DataVenda" id="DataVenda" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Desconto:</td>
+            <td><input type="text" name="Desconto" id="Desconto" class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td> <button type="submit" class="btn btn-primary">Enviar</button></td>
+        </tr>
+
+    </table>
+</form>
